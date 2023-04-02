@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While문 연습</title>
+</head>
+<body>
+    <script>
+        // 1부터 10까지의 합
+        let i = 0;
+        let sum_i = 0;
+
+        while(true){
+            i++;
+            if(i > 10)
+                break;
+            sum_i += i;
+            console.log("i = " + i + ", 합계 : " + sum_i);
+        }
+        document.write("<br>합계 : " + sum_i);
+    </script>
+    <br>
+    <hr>
+    <script>
+        // 3- 22강 반복할까요? Y / N 문구
+        
+        while(true){
+            var key = prompt("계속 반복할까요?" + ", Y / N");
+            if(key == "Y" || key == "y" ){
+                alert("반복합니다")
+            }
+            else if(key == "N" || key == "n"){
+                alert("중단합니다")
+                break;
+            }
+            else{
+                alert("잘못입력하셨습니다")               
+            }
+            
+        }
+        document.write("프로그램 종료!");
+    </script>
+</body>
+</html>

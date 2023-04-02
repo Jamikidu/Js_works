@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for문 곱하기 프로그램</title>
+</head>
+<body>
+    <script>
+        let facto = 1;
+        let f = prompt("곱할 수를 적어주세요");
+        f = parseInt(f);
+        let result = ""
+
+        for(i=1; i<=f; i++){
+            facto = facto * i
+            console.log("i = " + i + ", facto = " + facto);
+        }
+        result = f + "! = " + facto;
+        document.write(result);
+
+    </script>
+</body>
+</html>
