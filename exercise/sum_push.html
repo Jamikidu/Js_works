@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열의 객체 함수 연습문제</title>
+</head>
+<body>
+    <script>
+        let odd = [1, 3, 5, 7 ,9];
+        // let Numbers = new Array(5);
+        // console.log(Numbers)
+        let sumV = 0;
+
+        for(let i=0; i<odd.length; i++){
+        sumV += odd[i];
+        }
+        // for(var i=0; i < Numbers.length; i++){
+        //     Numbers[i] = (2*i+1);
+        // }
+        console.log(sumV);
+        odd.push(sumV);
+
+        //for ~ in 출력
+        for(let i in odd){
+            document.write(odd[i] + " ");
+        }
+    </script>
+</body>
+</html>

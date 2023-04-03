@@ -10,7 +10,15 @@
         let numbers = [1, 2, 3]
         let chars = ['a', 'b', 'c']
 
+        // let list = numbers + chars; - 문자 그대로 연결
         let list = numbers.concat(chars);
+        // list의 2번 조회
+        document.write(list[2] + "<br>")
+        // list 전체 조회
+        for(let i in list){
+            document.write(list[i] + "<br>");
+        }
+
         document.write(list);
         document.write("<br>");
 
