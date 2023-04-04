@@ -27,33 +27,33 @@
     </section>
 
     <script>
-        let member = 45;
-        let num = 6;
         
+        let name = ["가", "나", "다", "라", "마", "바", "사", "아", "자", "차", "카", "타", "파", "하"]
+        let people = new Array(6);
+        
+        console.log(name);
 
-        let lotto = new Array(6);
-
-        document.write("<p>번호 : ");
-        for(let i=0;i < lotto.length; i++){
-            let num = Math.floor(Math.random() * 45) + 1;
-            lotto[i] = num;
-            console.log(lotto);
+        document.write("<p>당첨 : ");
+        for(let i=0;i < people.length; i++){
+            let num = Math.floor(Math.random() * name.length);
+            people[i] = num;
+            console.log(people);
 
             for(let j = 0; j<i;j++){
-                if(lotto[j] == lotto[i]){
-                    console.log("중복 번호 : " + lotto[i])
+                if(people[j] == people[i]){
+                    console.log("중복 : " + people[i])
                     i--;
                 }
             }
         }
 
         //출력
-        for(let i=0; i<lotto.length; i++){
-                if(i == lotto.length-1){
-                    document.write(lotto[i] + "번 ");
+        for(let i=0; i<people.length; i++){
+                if(i == people.length-1){
+                    document.write(name[people[i]] + " ");
                 }
                 else{
-                    document.write(lotto[i] + "번, ");
+                    document.write(name[people[i]] + ", ");
                 }
             }
             document.write("<p>")

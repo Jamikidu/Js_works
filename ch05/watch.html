@@ -9,6 +9,7 @@
 <body>
     <h2>디지털 시계</h2>
     <p id="display"></p>
+    <p id="display2"></p>
 
     <script>
         setInterval(setWatch, 1000);
@@ -18,6 +19,17 @@
             let now = date.toLocaleTimeString();
             document.getElementById("display").innerHTML = now;
         }
+    </script>
+
+    <script>
+        setInterval(myWatch, 1000);
+
+        function myWatch(){
+            let date = new Date();
+            let now = date.toLocaleString();
+            document.getElementById("display2").innerHTML = now;
+        }
+
     </script>
 </body>
 </html>

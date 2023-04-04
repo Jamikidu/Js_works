@@ -17,22 +17,55 @@
     </div>
 
     <script>
-
+        /*
+            toggle 기능
+            let state = true; //상태 변수(전역 변수)
+            
+            if(state){  //조건이 상태 변수
+                실행1
+                state = false;
+            }else{
+                실행2
+                state = true;
+            }
+        */
         
+        let state = true;  // 상태 변수 - 전역(global)에 위치
+
         function showHide(){
-            // let sw = 0; 현재는 생략해도 됨
+            let img = document.getElementById("pic")
+            let btnText = document.getElementById("btnText")
+
+            if(state)/*(state == ture 랑똑같음)*/{
+                img.style.display = "block";
+                btnText.innerText = "숨기기";
+                state = false;
+            }else{
+                img.style.display = "none";
+                btnText.innerText = "보이기";
+                state = true;
+            }
+        }
+        
+
+
+
+        /*
+        function showHide(){
+            
             let img = document.getElementById("pic")
             let btnText = document.getElementById("btnText")
             if(img.style.display == "block"){
                 img.style.display = "none";
                 btnText.innerText = "보이기";
-                // sw = 1;
+                
             }else{
                 img.style.display = "block";
                 btnText.innerText = "숨기기";
-                // sw = 0;
+                
             }
         }
+        */
     </script>
 </body>
 </html>

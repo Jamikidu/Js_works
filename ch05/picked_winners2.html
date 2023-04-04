@@ -44,6 +44,7 @@
                 winner[i] = pickedOne; //당첨된 1개 번호를 배열에 저장
                 for(let j=0; j<i; j++){
                     if(winner[j] == winner[i]){ //중복인 경우 이전 인덱스로 돌아감
+                        console.log("중복 번호 : " + winner[i]);
                         i--;
                     }
                 }
