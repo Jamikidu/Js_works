@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-39강 자리배치도</title>
+    <style>
+        h1{text-align: center;}
+        table{border-collapse: collapse; margin: 0 auto;}
+        td{
+            padding: 10px;
+            border: 1.5px solid salmon;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>자리배치도</h1>
+
+    <script>
+        let people =  parseInt(prompt("입장객을 입력하세요", "10")) //입장객 수
+        let colNum =  parseInt(prompt("한 줄에 몇 명 앉나요?", "5")) //열의 수
+        let rowNum; //행의 수
+
+        if(people % colNum == 0){
+            rowNum = people / colNum;
+        }else{
+            rowNum = (people / colNum) + 1;
+        }
+
+        document.write("<table>");
+        for(let i=0; i< rowNum; i++){
+            document.write("<tr>");
+            for(let j=1; j<= colNum; j++ ){
+                let seatNum = colNum * i + j;
+                if(seatNum > people)
+                    break;
+                document.write("<td>좌석" + seatNum + "</td>")
+            }
+            document.write("</tr>")
+        }
+        document.write("</table>")
+
+    </script>
+</body>
+</html>
