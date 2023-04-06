@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>removeAttribute() - 노드의 속성 삭제</title>
+    <style>
+        .demoClass{color: red;}
+    </style>
+    <script>
+        function myFunc(){
+        document.querySelector(".demoClass").removeAttribute("class");
+        }
+
+        function myPic(){
+            document.querySelector("img").removeAttribute("src");
+        }
+    </script>
+</head>
+<body>
+    <h1 class="demoClass">Hello world!!</h1>
+    <button onclick="myFunc(); this.onclick='' ">색지우기</button>
+    <hr>
+    <img src="./images/cup-1.png" alt="컵1">
+    <button onclick="myPic(); this.onclick='' ">색지우기</button>
+</body>
+</html>

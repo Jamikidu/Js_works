@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 - 노드 생성</title>
+</head>
+<body>
+    <p>
+        단 입력 : <input type="text" id="myNum">
+        <button onclick="prinGugu(); this.onclick='' ">실행</button>
+    </p>
+
+    <!-- <h2>구구단 <span id="x">X</span>단</h2> -->
+
+    <div id="demo"></div>
+
+    <script>
+        function prinGugu(){
+            let strN = document.getElementById("myNum").value;
+            let n = parseInt(strN); //dan
+            let newH = document.createElement("h2"); //h태그 요소(노드) 생성
+            let text1 = document.createTextNode("구구단 " + n +"단");
+            
+            newH.appendChild(text1);
+            
+            let div = document.getElementById("demo")
+            div.appendChild(newH);
+
+
+            for(let i=1; i<10; i++){
+                let newDiv = document.createElement("p");
+                let text = document.createTextNode(n + "x" + i + "=" + (n*i));
+                newDiv.appendChild(text);
+                document.getElementById("demo").appendChild(newDiv);
+            }
+        }
+    </script>
+</body>
+</html>
