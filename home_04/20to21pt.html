@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get_el_byid2</title>
+</head>
+<body>
+    <h1 id="demo">The Document 객체</h1>
+    <h2>The getElementById</h2>
+
+    <script>
+        let h1 = document.getElementById("demo");
+        h1.style.color = "red";
+        h1.style.backgroundColor = "#0f0";
+    </script>
+    <br>
+    <hr>
+    <br>
+    <button onclick="myAbs(-5)">절대값 계산하기(-5)</button>
+    <p id="demo2"></p>
+    <script>
+        let myAbs = function(x){
+            if(x < 0){
+                document.getElementById("demo2").innerHTML = -x;
+            }else{
+                document.getElementById("demo2").innerHTML = x;
+            }
+        }
+    </script>
+</body>
+</html>

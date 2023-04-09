@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼 클릭하면 1증가</title>
+    <style>
+        div{text-align: center;}
+        button{padding: 5px; margin: 15px; cursor: pointer;}
+        #demo1{color: blue; font-size: x-large;}
+    </style>
+</head>
+<body>
+    <div>
+        <h1>클릭하면 1증가</h1>
+        <button onclick="plus()">Click Me</button>
+        <hr>
+        <p id="demo1"></p>
+    </div>
+
+    <script>
+        let x = 0;
+
+        function plus(){
+            x += 1;
+            document.getElementById("demo1").innerText = x;
+        }
+    </script>
+</body>
+</html>

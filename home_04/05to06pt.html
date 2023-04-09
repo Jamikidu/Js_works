@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수의 유형</title>
+</head>
+<body>
+    <script>
+        function sayHello(){
+            document.write("Hello~ <br>")
+        }
+
+        sayHello();
+    </script>
+    <hr>
+    <hr>
+    <script>
+        function sayHello(name){
+            document.write("Hello~ " + name + "<br>")
+        }
+
+        sayHello("강아지");
+        sayHello("고양이");
+    </script>
+    <hr>
+    <hr>
+    <script>
+        let hello = function(name){
+            document.write("Hello~ " + name + "<br>");
+        }
+        hello("가나다")
+        hello("라마바")
+    </script>
+</body>
+</html>
