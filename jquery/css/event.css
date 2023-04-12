@@ -1,0 +1,17 @@
+#item{
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+.btn_show{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.text{
+    width: 400px;
+    display: none;
+    padding: 5px;
+}
+.text h4{margin: 16px 0;}
+.text p{line-height: 1.7em;}

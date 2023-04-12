@@ -1,0 +1,19 @@
+제이쿼리
+- $(선택자) - 태그, class, id
+.css("color","red")
+.click(function(){})
+
+
+setAttribute('속성', '속성값')
+
+-attr(속성,속성값)
+
+
+오라클 자료형
+
+한글 - 3byte, 영어 - 1byte
+char(10) - 고정길이
+varchar2(10) - 가변길이
+
+date  - 날짜(연원일)
+timestamp - 날짜, 시간
