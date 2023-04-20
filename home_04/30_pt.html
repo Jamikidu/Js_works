@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>토글방식</title>
+</head>
+<body>
+    <button type="button" onclick="showhide()" id="btn">숨기기</button>
+    <p><img src="./images/flower1.jpg" alt="꽃사진" id="pic"></p>
+
+    <script>
+        let state = true;
+
+        function showhide(){
+            let pic = document.getElementById("pic");
+            let btn = document.getElementById("btn");
+
+            if(state){
+                pic.style.display = "none"
+                btn.innerText = "보이기"
+                state = false;
+            }
+            else{
+                pic.style.display = "block"
+                btn.innerText = "숨기기"
+                state = true;
+            }
+        }
+    </script>
+</body>
+</html>
