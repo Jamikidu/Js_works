@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리터럴을 사용한 배열 객체 생성</title>
+</head>
+<body>
+    <script>
+        let 동물 = []
+
+        동물[0] = "소";
+        동물[1] = "개";
+        동물[2] = "말";
+
+        동물[1] = "고양이";
+
+        delete 동물[2];
+
+        동물[2] = "돼지";
+        console.log(동물)
+
+        for(let i=0; i<동물.length; i++){
+            console.log(동물[i])
+        }
+    </script>
+</body>
+</html>
