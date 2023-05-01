@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열에서 최대값과 최소값 찾기</title>
+</head>
+<body>
+    <script>
+        let num = [33, 25, 17, 92, 56, 100, 81];
+        let maxV = num[0];
+
+        for(let i=1; i<num.length; i++){
+            if(maxV < num[i]){
+                maxV = num[i];
+            };
+        };
+
+        console.log("최대값은 " + maxV)
+    </script>
+</body>
+</html>

@@ -24,6 +24,25 @@
         for(let i=0; i<동물.length; i++){
             console.log(동물[i])
         }
+
+        let num = new Array()
+
+        num[0] = 11;
+        num[1] = 24;
+        num[2] = 30;
+        num[3] = 40;
+
+        let sum = 0;
+        let avg = 0;
+
+        for(let i=0; i<num.length; i++){
+            sum += num[i];
+        }
+        avg = sum / num.length;
+
+        console.log(sum);
+        console.log(avg.toFixed(3));
+
     </script>
 </body>
 </html>
