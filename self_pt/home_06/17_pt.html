@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>당첨자 추첨 프로그램(여러명)</title>
+    <style>
+        *{margin: 20px auto; text-align: center;}
+        div{width:500px;}
+        h1{width: 200px; padding: 15px; background: #ccc;}
+    </style>
+</head>
+<body>
+    <div>
+        <h1>당첨자 발표</h1>
+    </div>
+
+    <script>
+
+        
+
+        let people = parseInt(prompt("참가인원은??"));
+        let lucknum = parseInt(prompt("그 중 몇명을 뽑을까요?"));
+        let lucky = 0;
+
+        document.write("<p>총 인원 수는 " + people + "명입니다. </p>");
+
+        if(people == null || lucknum == null){
+            document.write("입력이 취소되었습니다.")
+        }
+        else if(isNaN(people) || isNaN(lucky)){
+            document.write("숫자를 입력해주세요.")
+        }
+        else{
+            for (let i=0;i < lucknum; i++){
+                lucky = Math.floor(Math.random() * people) + 1;
+
+                if(i == lucknum-1){
+                    document.write(lucky + "번 당첨 축하합니다!")
+                }
+                else{
+                    document.write(lucky + "번, ")
+                }
+            }
+        }
+    </script>
+</body>
+</html>
