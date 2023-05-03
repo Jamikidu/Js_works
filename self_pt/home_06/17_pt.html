@@ -22,27 +22,36 @@
 
         let people = parseInt(prompt("참가인원은??"));
         let lucknum = parseInt(prompt("그 중 몇명을 뽑을까요?"));
-        let lucky = 0;
+        
 
         document.write("<p>총 인원 수는 " + people + "명입니다. </p>");
 
         if(people == null || lucknum == null){
             document.write("입력이 취소되었습니다.")
         }
-        else if(isNaN(people) || isNaN(lucky)){
+        else if(isNaN(people) || isNaN(lucknum)){
             document.write("숫자를 입력해주세요.")
         }
         else{
+            let winners = new Array(lucknum);
             for (let i=0;i < lucknum; i++){
-                lucky = Math.floor(Math.random() * people) + 1;
-
-                if(i == lucknum-1){
-                    document.write(lucky + "번 당첨 축하합니다!")
+                let lucky = Math.floor(Math.random() * people) + 1;
+                winners[i] = lucky;
+                for(let j=0; j < i; j++){
+                    if(winners[j] == winners[i]){
+                        i--;
+                    }
                 }
-                else{
-                    document.write(lucky + "번, ")
-                }
+            
             }
+            for(let i=0; i<winners.length; i++){
+            if(i == winners.length - 1){
+                document.write(winners[i] + "번 당첨 축하합니다!")
+            }
+            else{
+                document.write(winners[i] + "번, ")
+            }
+        }
         }
     </script>
 </body>
